@@ -1,0 +1,177 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index/index",
+			"style": {
+				"enablePullDownRefresh": true,
+				"app-plus": {
+					"titleNView": {
+						"buttons": [{
+							"text": "找专家",
+							"fontSize": "16",
+							"float": "left",
+							"color": "#000000"
+						}],
+						"searchInput": {
+							"backgroundColor": "#D3D3D3",
+							"borderRadius": "10px",
+							"placeholderColor": "#8E8E8E",
+							"placeholder": "专家搜索",
+							"disabled": false
+						}
+					}
+				}
+			}
+		},
+		{
+			"path": "pages/seek/seek",
+			"style": {
+				"navigationBarTitleText": "专家在线",
+				"navigationBarBackgroundColor": "#009688"
+			}
+		},
+		{
+			"path": "pages/find/find",
+			"style": {
+				"navigationBarTitleText": "发现"
+			}
+		},
+		{
+			"path": "pages/my/my",
+			"style": {
+				"navigationBarTitleText": "个人中心"
+				//"titleImage": "static/04.png"
+			}
+		},
+		{
+			"path": "pages/login/login",
+			"style": {}
+		},
+		{
+			"path": "pages/choose/choose",
+			"style": {
+				"navigationBarTitleText": "管理咨询"
+			}
+		},
+		{
+			"path": "pages/userInfo/userInfo",
+			"style": {}
+		}, {
+			"path": "pages/record/record",
+			"style": {
+				"navigationBarTitleText": "咨询"
+			}
+		}
+
+		, {
+			"path": "pages/room/room",
+			"style": {
+				"navigationBarTitleText": "在线咨询",
+				"navigationBarBackgroundColor": "#778899",
+				"backgroundTextStyle": "light"
+			}
+		}, {
+			"path": "pages/card/card",
+			"style": {
+				"navigationBarTitleText": "卡包"
+			}
+		}, {
+			"path": "pages/user/user",
+			"style": {
+				"navigationBarTitleText": "会员注册"
+			}
+		}, {
+			"path": "pages/help/help",
+			"style": {
+				"navigationBarTitleText": "帮助信息"
+			}
+		}, {
+			"path": "pages/vouchers/vouchers",
+			"style": {
+				"navigationBarTitleText": "代金券"
+			}
+		}, {
+			"path": "pages/store/store",
+			"style": {
+				"navigationBarTitleText": "专家收藏"
+			}
+		}, {
+			"path": "pages/settled/settled",
+			"style": {
+				"navigationBarTitleText": "专家入驻"
+			}
+		}, {
+			"path": "pages/content/content",
+			"style": {
+				"navigationBarTitleText": "问题描述"
+			}
+		}, {
+			"path": "pages/order/order",
+			"style": {
+				"navigationBarTitleText": "预约咨询"
+			}
+		}, {
+			"path": "pages/confirm/confirm",
+			"style": {
+				"navigationBarTitleText": "专家确认"
+			}
+		}, {
+			"path": "pages/pay/pay",
+			"style": {
+				"navigationBarTitleText": "支付"
+			}
+		}, {
+			"path": "pages/consult/consult",
+			"style": {
+				"navigationBarTitleText": "咨询"
+			}
+		}, {
+			"path": "pages/appraise/appraise",
+			"style": {
+				"navigationBarTitleText": "评价"
+			}
+		}, {
+			"path": "pages/userDetail/userDetail",
+			"style": {}
+		}, {
+			"path": "pages/changeUserInfo/changeUserInfo",
+			"style": {
+				"navigationBarTitleText": "用户信息"
+			}
+		}, {
+			"path": "pages/showInfo/showInfo",
+			"style": {}
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarBackgroundColor": "#F8F8F8"
+	},
+	"tabBar": {
+		"list": [{
+				"pagePath": "pages/index/index",
+				"iconPath": "static/04.png",
+				"selectedIconPath": "static/04.png",
+				"text": "专家"
+			},
+			{
+				"pagePath": "pages/record/record",
+				"iconPath": "static/02.png",
+				"selectedIconPath": "static/02.png",
+				"text": "咨询"
+			},
+			{
+				"pagePath": "pages/find/find",
+				"iconPath": "static/discount.png",
+				"selectedIconPath": "static/discount.png",
+				"text": "发现"
+			},
+			{
+				"pagePath": "pages/my/my",
+				"iconPath": "static/01.png",
+				"selectedIconPath": "static/01.png",
+				"text": "我的"
+			}
+		]
+	}
+}

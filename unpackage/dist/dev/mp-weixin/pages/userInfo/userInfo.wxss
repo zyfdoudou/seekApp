@@ -1,0 +1,67 @@
+
+.infoImg {
+	background-color: #696969;
+}
+image {
+	display: block;
+	margin: auto;
+}
+.userCode {
+	height: 50rpx;
+	width: 50rpx;
+}
+.userInfo {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: row;
+	        flex-direction: row;
+	margin: 20rpx 30rpx;
+}
+.userPrice {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	width: 100%;
+	-webkit-box-pack: end;
+	-webkit-justify-content: flex-end;
+	        justify-content: flex-end;
+	color: #DD524D;
+	font-size: 14rpx;
+}
+.userRule {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: row;
+	        flex-direction: row;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	        justify-content: center;
+	margin: 30rpx;
+}
+.userIntro {
+	font-size: 18rpx;
+	color: #999999;
+	text-indent: 40rpx;
+	line-height: 50rpx;
+	margin-top: 30rpx;
+}
+.info {
+	margin: 20rpx 20rpx;
+}
+.line {
+	size: 30rpx;
+	margin: 30rpx 20rpx;
+}
+.seek{
+	position: fixed;
+	bottom: 0;
+	right: 20rpx;
+}
+
+

@@ -1,0 +1,54 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/seek/seek",
+    "pages/find/find",
+    "pages/my/my",
+    "pages/login/login",
+    "pages/choose/choose",
+    "pages/userInfo/userInfo",
+    "pages/record/record",
+    "pages/room/room",
+    "pages/card/card",
+    "pages/user/user",
+    "pages/help/help",
+    "pages/vouchers/vouchers",
+    "pages/store/store",
+    "pages/settled/settled",
+    "pages/content/content"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarBackgroundColor": "#F8F8F8"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "static/04.png",
+        "selectedIconPath": "static/04.png",
+        "text": "专家"
+      },
+      {
+        "pagePath": "pages/record/record",
+        "iconPath": "static/03.png",
+        "selectedIconPath": "static/03.png",
+        "text": "咨询"
+      },
+      {
+        "pagePath": "pages/find/find",
+        "iconPath": "static/02.png",
+        "selectedIconPath": "static/02.png",
+        "text": "发现"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "iconPath": "static/01.png",
+        "selectedIconPath": "static/01.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "usingComponents": {}
+}
