@@ -1,6 +1,6 @@
 <template>
 	<view>
-		<l-file ref="lFile" @up-callback="upCallback"></l-file>
+		<l-file ref="lFile" @up-callback="upSuccess"></l-file>
 		<view class="top">
 			<view class="top-pro">
 				<span class="active">预约</span>
@@ -70,6 +70,7 @@
 	import uniProgress from "../../static/components/uni-progres.vue"
 	import uniNumberBox from "@/components/uni-number-box/uni-number-box.vue"
 	import url from "../../common/config.js";
+	import fileName from "../../common/file.js"
 	var _self;
 	export default {
 		components: {
@@ -80,9 +81,10 @@
 		data() {
 			return {
 				num: 0,
-				price: 2000,
+				price: '',
 				url: url,
 				downUrl: '',
+				_price: '',
 				zx: {
 					user_id: '',
 					post_id: '',
@@ -90,7 +92,7 @@
 					sc: '',
 					price: '',
 					remark: '',
-					qdoc: ''
+					qdoc: fileName
 				}
 			}
 		},
@@ -99,21 +101,11 @@
 				_self.downUrl = _self.url + 'upload/portal/wordFile/codeDemo.doc',
 				_self.zx.user_id = options.user_id,
 				_self.zx.post_id = options.post_id,
-				_self.price = options.price
-			/* uni.getStorage({
-				key:'userTel',
-				success:function(res){
-					console.log(res.data)
-				}
-			}) */
+				_self._price = options.price,
+				_self.price = _self._price
 		},
 		methods: {
 			confirm() {
-				console.log(_self.zx)
-				//console.log(_self.zx,'咨询');
-				/*
-					先保存数据，再进行跳转
-				*/
 				if (_self.zx.post_id == '') {
 					uni.showToast({
 						title: '没有选择专家'
@@ -130,7 +122,7 @@
 					uni.showToast({
 						title: '备注公司信息'
 					})
-				} else if (_self.zx.src == '') {
+				} else if (_self.zx.qdoc == '') {
 					uni.showToast({
 						title: '必须提交咨询材料'
 					})
@@ -152,7 +144,8 @@
 
 			},
 			bindChange(e) {
-				_self.price = (_self.price * e);
+				_self.zx.sc = e;
+				_self.price = (_self._price * e);
 				_self.zx.price = this.price;
 			},
 			//_self.url + 'upload/portal/wordFile/codeDemo.doc'
@@ -171,6 +164,7 @@
 			},
 			//上传文件
 			uploadFile() {
+				
 				this.$refs.lFile.upload({
 					// #ifdef APP-PLUS
 					currentWebview: this.$mp.page.$getAppWebview(),
@@ -182,10 +176,16 @@
 					// header: {'Content-Type':'类型','Authorization':'token'},
 					//...其他参数
 				});
+				
 			},
-			upCallback(res) {
-				console.log('上传成功回调', JSON.stringify(res));
-				_self.zx.qdoc = res.data.id;
+			upSuccess(res) {
+				console.log('****************************************');
+				/* let end = JSON.stringify(res)
+				console.log('上传成功回调', end);
+				uni.showToast({
+					title: JSON.stringify(res),
+					icon: 'none'
+				}) */
 			}
 		}
 	}

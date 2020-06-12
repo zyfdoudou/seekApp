@@ -1,8 +1,10 @@
+
 let mask = document.querySelector(".mask");
 let fileDom = document.querySelector(".file");
 let tis = document.querySelector(".tis");
 let progress = document.querySelector(".tis-progress");
 let cancel = document.querySelector(".cancel-btn");
+let qdoc = '';
 
 
 let createUpload = (file, url, key='file', header = {},data = {}) => {
@@ -51,6 +53,8 @@ let createUpload = (file, url, key='file', header = {},data = {}) => {
 			if (xhr.status == 200) {
 				progress.innerText = '上传成功';
 				console.log('返回数据：'+xhr.responseText);
+				qdoc = xhr.responseText;
+				fileName = qdoc;
 				location.href = `callback?fileName=${file.name}&id=${xhr.responseText}`;
 				
 			}
